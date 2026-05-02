@@ -105,7 +105,7 @@ function Cards() {
       <div className="cards-grid">
         {data.map((item, index) => (
           <div className="card" key={index}>
-            <img src={item.img} alt={item.title} />
+            <img src="https://srivedhastones.com/wp-content/uploads/2022/11/Zed_Black.jpg" alt={item.title} />
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
           </div>
