@@ -1,7 +1,5 @@
 import React from 'react';
 import './Cards.css';
-
-// ✅ Import all images properly
 import antiSkid from '../assets/marbelimgs/Anti-Skid_Granites.jpg';
 import cellWhite from '../assets/marbelimgs/Cell_white.jpg';
 import coffeeBrown from '../assets/marbelimgs/Coffee_Brown.jpg';
