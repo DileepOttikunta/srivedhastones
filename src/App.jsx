@@ -1,7 +1,18 @@
-import React from 'react';
-// import MarbleStudio from './MarbleStudio';
-import { ContactUs } from './ContactUs';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export default function App() {
-  return <ContactUs />;
+import NavigationBar from "./NavigationBar";
+import MarbelStudio from "./MarbelStudio";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavigationBar />} />
+        <Route path="/studio" element={<MarbelStudio />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
+
+export default App;

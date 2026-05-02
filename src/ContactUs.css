@@ -1,12 +1,38 @@
 .contact-container {
-  padding: 40px;
-  background: #f5f7fa;
-  min-height: 100vh;
+  padding: 60px 20px;
+  background: teal;
+  color: white;
 }
 
+/* HEADER */
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #cbd5e1;
+  font-style: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 16px;
+  font-style: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* LAYOUT */
 .contact-wrapper {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   max-width: 1200px;
   margin: auto;
 }
@@ -14,41 +40,35 @@
 /* FORM */
 .contact-form {
   flex: 1;
-  background: #ffffff;
+  background: white;
+  backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 .contact-form h2 {
-  margin-bottom: 10px;
+  color: #00e5ff;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: none;
   outline: none;
-  transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007bff;
 }
 
 .contact-form button {
   padding: 12px;
   border: none;
-  background: linear-gradient(45deg, #007bff, #00c6ff);
-  color: white;
+  background: linear-gradient(45deg, #00e5ff, #00bfa6);
+  color: black;
+  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .contact-form button:hover {
@@ -61,12 +81,8 @@
   height: 450px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-h2{
-    color: #007bff;
-}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .contact-wrapper {
@@ -76,4 +92,65 @@ h2{
   .map-container {
     height: 300px;
   }
+}
+
+.map-container {
+  position: relative;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* 🔥 Direction Button */
+.direction-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: linear-gradient(45deg, #00e5ff, #00bfa6);
+  color: black;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.direction-btn:hover {
+  transform: scale(1.05);
+  background: gold;
+}
+
+/* MAIN TOAST BOX */
+.custom-toast {
+  border-radius: 12px !important;
+  padding: 10px !important;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #00e5ff, #00bfa6) !important;
+  color: #000 !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.custom-toast-body {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* SUCCESS ICON COLOR */
+.Toastify__toast-icon svg {
+  fill: white !important;
+}
+
+/* PROGRESS BAR */
+.Toastify__progress-bar {
+  background: rgb(232, 235, 238) !important;
+}
+.custom-toast {
+  background:#008000!important;
+  backdrop-filter: blur(10px);
+  color: white !important;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

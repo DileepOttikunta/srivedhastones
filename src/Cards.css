@@ -1,0 +1,73 @@
+
+.cards-container {
+  padding: 80px 60px;
+  background: #f6f6f7; /* dark luxury bg */
+}
+
+/* GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background:teal;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* CONTENT */
+.card h2 {
+  color: white;
+  margin: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  color: #cbd5e1;
+  margin: 0 15px 20px;
+  font-size: 14px;
+}
+
+/* HOVER EFFECT 🔥 */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 150, 136, 0.4);
+}
+
+/* IMAGE ZOOM */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* GOLD BORDER EFFECT */
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 1px;
+  background: linear-gradient(45deg, white, transparent, teal);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}

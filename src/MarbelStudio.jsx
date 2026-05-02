@@ -5,6 +5,8 @@ import RoomSelector from './components/RoomSelector';
 import Scene3D from './components/Scene3D';
 import { marbles, rooms } from './marbles';
 import './App.css';
+import { Link } from "react-router-dom";
+
 
 export default function MarbleStudio() {
   const [selectedMarble, setSelectedMarble] = useState(marbles[0]);
@@ -29,7 +31,7 @@ export default function MarbleStudio() {
       <header className="header">
         <div className="header-left">
           <div>
-            <h1 className="title">Marble Studio</h1>
+            <h1 className="title">SrivedhaStones - Marble Studio</h1>
             <p className="subtitle">Visualize premium flooring in 360°</p>
           </div>
         </div>
@@ -98,7 +100,7 @@ export default function MarbleStudio() {
             </div>
             
             <div className="flex-row-center w-full gap-2">
-              <input 
+              <input className='colorround'
                 type="color" 
                 value={wallColor}
                 onChange={(e) => setWallColor(e.target.value)}
